@@ -1,0 +1,162 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+
+@mixin mytheme {
+  @include valo;
+
+  .headerFirstRow{
+    background-color: #2b2a29;
+    height: 78px;
+    width: 100%;
+    border: none;
+    border-radius: unset;
+    text-align: center;
+  }
+  .headerFirstRow .v-label {
+    color: whitesmoke;
+  }
+  .logo-batman {
+    margin-top: 9px;
+  }
+  .headerSecondRow{
+    height:36px;
+    width: 100%;
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.6);
+    border: none;
+    border-radius: unset;
+    text-align: center;
+  }
+  .v-button {
+    border: none;
+    border-radius: unset;
+    background: #2b2a29;
+    height: 30px;
+  }
+  .v-button-caption {
+    color: whitesmoke;
+  }
+  .logout {
+    margin-left: 50px;
+    background-color: white;
+    box-shadow: none;
+  }
+  .window-menu{
+    border-radius: unset;
+
+  }
+  .window-menu .v-panel{
+    margin-top: 10px;
+  }
+  .window-menu .v-button{
+    margin-top: 10px;
+  }
+  .window-menu .v-window-closebox {
+    border-radius: unset;
+    background: #2b2a29;
+  }
+  .window-menu .v-window-header {
+    border-radius: unset;
+    background: #2b2a29;
+    text-decoration-color: white;
+  }
+  .window-menu .v-window-outerheader {
+    border-radius: unset;
+    background: #2b2a29;
+  }
+  .v-button:focus:after{
+    border-color: unset;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .v-panel-content-headerSecondRow .v-horizontallayout{
+    padding-top: 3px;
+  }
+  .v-button-logout .v-button-caption {
+    color: #2b2a29;
+  }
+  .v-spacing {
+    height: 0px;
+  }
+  .v-margin-top {
+    padding-top: 0px;
+  }
+  .v-margin-left {
+    padding-left: 0;
+    margin-left: auto;
+  }
+  .bg-video {
+    width: 100% !important;
+    height: inherit !important;
+  }
+
+  .v-margin-right {
+    padding-right: 0;
+    margin-right: auto;
+  }
+  .content-container {
+    width: 773px;
+    text-align: center;
+  }
+  .v-grid-header .v-grid-cell {
+    background: rgb(44,166,159);
+  }
+
+  .v-absolutelayout-wrapper.v-absolutelayout-wrapper-absolutelayout-childcomponent {
+    z-index: 3;
+    opacity: 0.8;
+    border-radius: unset;
+    background: rgb(62,103,197);
+  }
+  .v-panel-absolutelayout-childcomponent{
+    background: rgb(62,103,197);
+    border-radius: unset;
+  }
+  .v-absolutelayout-wrapper.v-absolutelayout-wrapper-bg-video {
+    z-index: 2;
+  }
+  .v-absolutelayout-wrapper.v-absolutelayout-wrapper-mute-img {
+    z-index: 3;
+  }
+  .v-absolutelayout-wrapper.v-absolutelayout-wrapper-bg-image {
+    z-index: 1;
+  }
+  .v-margin-bottom {
+     padding-bottom: 0;
+  }
+  .v-ui{
+    background-color: white;
+  }
+
+  // Insert your own theme rules here
+}
